@@ -22,8 +22,6 @@ const PokemonByNamePage: NextPage<Props> = ({ pokemon }) => {
     LocalFavorite.existInFavorites(pokemon.id)
   );
 
-  console.log(isInFavorites);
-
   const onToggleFavorite = () => {
     LocalFavorite.toggleFavorite(pokemon.id);
     setIsInFavorites(!isInFavorites);
